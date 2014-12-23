@@ -1,6 +1,12 @@
 <?php
 
+namespace App\Core;
+
+
+use App\Core\Config;
+
 class Controller{
+
 	
 	private $vars = array();
 
@@ -13,6 +19,6 @@ class Controller{
 			$this->set($data);
 		
 		extract($this->vars);
-		require(ROOT.'views/'.$filename.'.php');
+		require(ROOT.'view/'.$filename.'.php');
 	}
 }
